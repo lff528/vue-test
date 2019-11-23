@@ -12,3 +12,4 @@ axios.interceptors.request.use((req)=>{
     Response.headers["token"] = Vue.cookie("token") //请求头添加token
     return req;
 },(error)=>Promise.reject(error));
+//待续
