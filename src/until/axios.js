@@ -13,3 +13,14 @@ axios.interceptors.request.use((req)=>{
     return req;
 },(error)=>Promise.reject(error));
 //待续
+axios.interceptors.response.use(
+    function(response){
+        if(response.data.errCode == 400){
+            //登录失效，需要重新登录的代码
+
+        }
+    },
+    function(error){
+        return Promise.reject(error)
+    }
+)
